@@ -3,20 +3,26 @@
 <html>
     <head>
         <meta lang="en">
+        <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
         <div>
             <h1 id="title">Contact</h1>
-            <p id="description">Use this form to get in touch.</p>
+            <p id="description">I'd love to hear from you! Use this form to get in touch.</p>
         </div>
         <div>
             <form id="survey-form">
-                <label> Name: 
-                    <input id="name" type=text required>
-                </label>
-                <label> Email:
-                    <input id="email" type=email required>
-                </label>
+                <fieldset>
+                    <label for="name" id="label-name"> Name: 
+                        <input id="name" type=text required>
+                    </label>
+                    <label for="email" id="label-email"> Email:
+                        <input id="email" type=email required>
+                    </label>
+                    <label for="number" id="label-number"> Mobile Number (Optional):
+                        <input id="number" type=number required>
+                    </label>
+                </fieldset>
             </form>
         </div>
     </body>
