@@ -14,32 +14,32 @@
             <form id="survey-form">
                 <fieldset>
                     <h3>Contact Information</h3>
-                    <label for="name" id="label-name"> Name: 
+                    <label for="name" id="name-label"> Name: 
                         <input id="name" type=text placeholder="Your Name" required>
                     </label>
-                    <label for="email" id="label-email"> Email:
+                    <label for="email" id="email-label"> Email:
                         <input id="email" type=email placeholder="name@provider.com"required>
                     </label>
-                    <label for="number" id="label-number"> Mobile Number (Optional):
-                        <input id="number" type=number placeholder="123456789" required>
+                    <label for="number" id="number-label"> Mobile Number (Optional):
+                        <input id="number" type=number placeholder="123456789" type="number" min="1" max="9999999999" required>
                     </label>
                 </fieldset>
                 <fieldset>
                     <h3>How would you like to be contacted?</h3>
                     <label> 
-                        <input type="radio" name="contact-preference" id="contact-preference" class="inline" checked/> Email
+                        <input type="radio" value="1" name="contact-preference" id="contact-preference" class="inline" checked/> Email
                     </label>
                     <label> 
-                        <input type="radio" name="contact-preference" id="contact-preference" class="inline"/> Phone
+                        <input type="radio" value="2" name="contact-preference" id="contact-preference" class="inline"/> Phone
                     </label>
                 </fieldset>
                 <fieldset>
                     <h3>
                         Your Inquiry
                     </h3>
-                    <label for="industry-type">Type of industry:
-                        <select id="industry-type" name="industry-type">
-                            <option value="">Select one</option>
+                    <label for="industry-type" id="industry-label">Type of industry:
+                        <select id="dropdown" name="industry-type">
+                            <option value="0">Select one</option>
                             <option value="1">Academia</option>
                             <option value="2">Industry</option>
                             <option value="3">Individual</option>
@@ -47,19 +47,21 @@
                     </label>
                     <label>What would you like to discuss? (select all that apply):</label>
                     <label for="data-science">
-                        <input type="checkbox" id="data-science" class="inline"/>Data science
+                        <input type="checkbox" value="1" vid="data-science" class="inline"/>Data science
                     </label>
                     <label for="academic-research">
-                        <input type="checkbox" id="academic-reseaech" class="inline"/>Academic research
+                        <input type="checkbox" value="2" id="academic-reseaech" class="inline"/>Academic research
                     </label>
                     <label for="ag-metaphysics">
-                        <input type="checkbox" id="ag-metaphysics" class="inline"/>Avant-Garde Metaphysics
+                        <input type="checkbox" value="3" id="ag-metaphysics" class="inline"/>Avant-Garde Metaphysics
                     </label>
-                    <label for="inquiry">Please provide details of your inquiry:
+                    <label for="inquiry" id="inquiry-label">Please provide details of your inquiry:
                         <textarea name="inquiry" id="inquiry" rows="3">Your inquiry here</textarea>
                     </label>
                 </fieldset>
-                <input type="submit" name="Submit"/>
+                <fieldset>
+                    <input type=submit id="submit" name="Submit"/>
+                </fieldset>
             </form>
         </div>
     </body>
