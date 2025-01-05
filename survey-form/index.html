@@ -14,13 +14,22 @@
             <form id="survey-form">
                 <fieldset>
                     <label for="name" id="label-name"> Name: 
-                        <input id="name" type=text required>
+                        <input id="name" type=text placeholder="Your Name" required>
                     </label>
                     <label for="email" id="label-email"> Email:
-                        <input id="email" type=email required>
+                        <input id="email" type=email placeholder="name@provider.com"required>
                     </label>
                     <label for="number" id="label-number"> Mobile Number (Optional):
-                        <input id="number" type=number required>
+                        <input id="number" type=number placeholder="123456789" required>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    How would you prefer to be contacted?
+                    <label> 
+                        <input type="radio" name="contact-preference" class="inline"/> Email
+                    </label>
+                    <label> 
+                        <input type="radio" name="contact-preference" class="inline"/> Phone
                     </label>
                 </fieldset>
             </form>
