@@ -13,6 +13,7 @@
         <div>
             <form id="survey-form">
                 <fieldset>
+                    <h3>Contact Information</h3>
                     <label for="name" id="label-name"> Name: 
                         <input id="name" type=text placeholder="Your Name" required>
                     </label>
@@ -24,14 +25,41 @@
                     </label>
                 </fieldset>
                 <fieldset>
-                    How would you prefer to be contacted?
+                    <h3>How would you like to be contacted?</h3>
                     <label> 
-                        <input type="radio" name="contact-preference" class="inline"/> Email
+                        <input type="radio" name="contact-preference" id="contact-preference" class="inline" checked/> Email
                     </label>
                     <label> 
-                        <input type="radio" name="contact-preference" class="inline"/> Phone
+                        <input type="radio" name="contact-preference" id="contact-preference" class="inline"/> Phone
                     </label>
                 </fieldset>
+                <fieldset>
+                    <h3>
+                        Your Inquiry
+                    </h3>
+                    <label for="industry-type">Type of industry:
+                        <select id="industry-type" name="industry-type">
+                            <option value="">Select one</option>
+                            <option value="1">Academia</option>
+                            <option value="2">Industry</option>
+                            <option value="3">Individual</option>
+                        </select>
+                    </label>
+                    <label>What would you like to discuss? (select all that apply):</label>
+                    <label for="data-science">
+                        <input type="checkbox" id="data-science" class="inline"/>Data science
+                    </label>
+                    <label for="academic-research">
+                        <input type="checkbox" id="academic-reseaech" class="inline"/>Academic research
+                    </label>
+                    <label for="ag-metaphysics">
+                        <input type="checkbox" id="ag-metaphysics" class="inline"/>Avant-Garde Metaphysics
+                    </label>
+                    <label for="inquiry">Please provide details of your inquiry:
+                        <textarea name="inquiry" id="inquiry" rows="3">Your inquiry here</textarea>
+                    </label>
+                </fieldset>
+                <input type="submit" name="Submit"/>
             </form>
         </div>
     </body>
