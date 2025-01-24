@@ -9,15 +9,40 @@
         <meta name="description" content="CV for Patrick Rowe">
         <meta name="viewport" content="width:device-width, initial-scale=1">
 
-        <link name="sylesheet" href="styles.css">
+        <link name="sylesheet" rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <h1>A H1 Title</h1>
+        <header id="header">
+            <h1>CV: Patrick Rowe</h1>
+            <nav>
+                <ul>
+                    <li><a href="#Introduction">Introduction</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Education">Education</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <h2>A H2 Title</h2>
-            <p>Some paragraph text</p>
+        <main id="main">
+            <section role="region" aria-labelledby="Introduction">
+                <h2>Introduction</h2>
+                <p>Some paragraph text</p>
+                <div id="img-div">
+                    <img 
+                    id="image" 
+                    src="https://avatars.githubusercontent.com/u/103279917?s=400&u=bfdab7288cf97d4f37abc4eba7e37171b87ab8eb&v=4" 
+                    alt="A picture of Patrick Rowe"
+                    >
+                    <p>Patrick Rowe in 2019</p>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="Experience">
+                <h2>Experience </h2>
+                <p> Experience text</p>
+            </section>
+            <section role="region" aria-labelledby="Education">
+                <h2>Education </h2>
+                <p> education text</p>
+            </section>
         </main>
     </body>
 </html>
