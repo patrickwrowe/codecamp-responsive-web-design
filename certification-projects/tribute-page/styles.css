@@ -98,4 +98,5 @@ header> nav > ul > li > a {
     width: max(200px, 0.5rem);
     margin: auto;
     display: block;
+    max-width: 100%;
 }
