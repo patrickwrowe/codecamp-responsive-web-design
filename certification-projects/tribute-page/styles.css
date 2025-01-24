@@ -16,7 +16,14 @@ Pumpkin: #F5853F
 }
 
 * {
+    scroll-behavior: smooth;   
+}
+
+body {
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--almost-white);
+    color: var(--rich-black);
 }
 
 header {
@@ -31,9 +38,22 @@ header {
     top: 0;
 }
 
+main {
+    margin: auto;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
 nav {
     max-width: 300px; 
-    height: 50px; 
     width: 100%;
 }
 
@@ -66,7 +86,16 @@ header> nav > ul > li > a {
 }
 
 .img-div {
-    max-width: max-content;
-    justify-content: right;
+    max-width: max(200px, 0.5rem);
+    margin-bottom: 50px;
+}
 
+.image-caption {
+    text-align: center;
+}
+
+#image {
+    width: max(200px, 0.5rem);
+    margin: auto;
+    display: block;
 }
