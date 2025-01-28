@@ -8,36 +8,59 @@ nav {
     height: 100%;
     position: fixed;
     z-index: 1;
-    border: 2px solid red;
+    border: 2px solid darkgray;
+    background-color: lightgray;
     top: 0;
     left: 0;
     overflow-x: hidden;
+    font-size: 1.25rem;
+    border-right: 5px solid #e2e62e;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 nav header {
     height: 3rem;
+    text-align: center;
+    color: darkslategray
 }
 
 .nav-link {
     display: block;
-    height: 2rem;
+    height: 2.5rem;
     background-color: aliceblue;
-    border: 2px solid blue;
+    border: 2px solid #e2e62e;
     margin: 2px auto;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    color: darkslategrey
+}
+
+.nav-link:hover {
+    background-color: darkslategray;
+    color: lightgrey
+}
+
+.section-div {
+    border-bottom: 3px solid #e2e62e;
+    width: 300px;
+    margin-top: -10px;
 }
 
 #main-doc {
     position: absolute;
     margin-left: 210px;
+    color: darkslategray;
 }
 
 .main-section {
-    width: 500px;
+    width: 750px;
     height: 500px;
-    border: 2px solid black;
     margin: 2px auto;
 }
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
 }
