@@ -36,6 +36,13 @@
                 <div class="section-div"></div>
 
                 <p>The GAP-20 AI model was built with the aim of performing highly accurate atomistic simulations of carbon. At the time of its publication it was the first general-purpose model for performing atomistic simulations using AI. It continues to be actively used for fundamental research, and is a benchmark for accuracy against which new models are compared.</p>
+
+                <figure>
+                    <img src="figures/Figure_1_Summary.png" alt="Summary image of the GAP-20 model, showing training data" id="fig-1-summary"/>
+                    <figcaption>(A) Reduced dimensionality sketch-map representation carbon structure training dataset for the GAP-20 model. Embedded space is created using the same features the model is trained on. Points are coloured according to their energy, while contours indicate the density of the database population in a particular region. (B) Predicted crystalline formation energies, (C) defect formation energies and (d) surface energies, comparing the quantum mechanical reference (black circles) GAP-20 (red crosses) and other popular models (blue crosses).</figcaption>
+                    <div class="fig-div"></div>
+                </figure>
+
                 <p>GAP-20 uses the Gaussian approximation potential (GAP) methodology. It describes the properties of the bulk crystalline and amorphous phases, crystal surfaces, and defect structures with an accuracy approaching that of direct quantum mechanical simulation, but at a significantly reduced computational cost.</p>
              </section>
 
@@ -46,12 +53,44 @@
                 </header>
                 <div class="section-div"></div>
 
-                <p>The GAP-20 model was rigorously validated by assessing its ability to reproduce the physical properties of carbon. In addition to perfect structures, the characteristics of an extensive set of defect structures, surfaces and surface reconstructions were checked against quantum mechanical benchmark calculations.</p>
+                <p>The GAP-20 model was rigorously validated by assessing its ability to reproduce the physical properties of carbon. In addition to idealised crystalline structures, the characteristics of an extensive set of defect structures, surfaces and surface reconstructions were checked against quantum mechanical benchmark calculations.</p>
+                
                 <figure>
-                    <img src="Figure_1_Summary_Cropped.png" alt="Summary image of the GAP-20 model, showing training data" id="fig-1-summary"/>
-                    <figcaption>Reduced dimensionality sketch-map representation carbon structure training dataset for the GAP-20 model. Embedded space is created using the same features the model is trained on. Points are coloured according to their energy, while contours indicate the density of the database population in a particular region.</figcaption>
+                    <img src="figures/Figure_5_Phonons.png" alt="Phonon dispersion relations for carbon" id="fig-2-phonons"/>
+                    <figcaption>Vibrational behaviour, shown with the phonon dispersion relations of diamond, graphene and two types of carbon nanotubes.</figcaption>
+                    <div class="fig-div"></div>
                 </figure>
-                <div class="fig-div"></div>
+
+                <p>Phonon dispersion relations are particularly important for carbon-based materials (such as graphene, carbon nanotubes, and diamond) because they influence several key physical properties, accurately reproducing the phonon dispersions demonstrates that the model can accurately reproduce:</p>
+
+                <ul id="phonons-list">
+                    <li>Thermal Conductivity: Carbon-based materials often exhibit exceptionally high thermal conductivity, especially graphene and diamond.</li>
+                    <li>Mechanical Properties: The stiffness and strength of materials depend on how atoms vibrate within the lattice. For example, graphene's high Young's modulus (stiffness) is linked to its unique phonon dispersion, where the in-plane optical and acoustic phonon branches contribute to its rigidity.</li>
+                    <li>Electronic-Phonon Interactions: In semiconducting carbon materials (like carbon nanotubes), phonons can scatter electrons, impacting electrical conductivity and charge carrier mobility. This is crucial for designing high-performance nanoelectronic devices.</li>
+                    <li>Anharmonic Effects and Superconductivity: In some carbon-based materials, interactions between phonons can lead to unusual quantum effects, such as high-temperature superconductivity (as seen in doped diamond or fullerenes).</li>
+                </ul>
+                
+                <p>The GAP-20 model has been shown independently to reproduce the <a href="#cit-structure-modelling">temperature-pressure phase diagram of carbon.</a> This demonstrates that the model not only accurately models the individual crystalline phases of the material, but also its transitions from one phase to another as changes in temperature and pressure are undergone.</p>
+
+                <figure>
+                    <img src="figures/phase-diagram.png" alt="Carbon phase diagram">
+                    <figcaption>Phase diagram of carbon, as calculated with GAP-20, compared to experimental and exact quantum mechanical solution.</figcaption>
+                    <div class="fig-div"></div>
+                </figure>
+
+                <p>The model also accurately reproduces the structures and energies of defects in carbon structures. Point defects—such as vacancies, interstitials, and substitutional atoms—play a crucial role in determining the physical properties of carbon-based materials. Understanding them is essential for applications in electronics, mechanics, and energy storage.</p>
+
+                <ul id="defects-list">
+                    <li>Electronic Properties: In semiconducting carbon materials (like graphene nanoribbons or carbon nanotubes), point defects can introduce localized electronic states, modify band gaps, and act as charge traps. This is useful for tailoring electronic transport in nanoelectronic devices.</li>
+                    <li>Thermal Conductivity: Carbon-based materials, especially graphene and diamond, rely on phonon transport for heat conduction. Point defects scatter phonons, reducing thermal conductivity. This can be beneficial for thermoelectrics, where lower thermal conductivity improves efficiency.</li>
+                    <li>Chemical Reactivity and Functionalization: Defects often serve as active sites for chemical reactions. In graphene, for example, vacancies or substitutional atoms can enhance adsorption properties, making defective graphene useful for sensors, catalysis, and energy storage applications (e.g., Li-ion batteries).</li>
+                </ul>
+
+                <figure>
+                    <img src="figures/Figure_6_Defects.png" alt="Carbon Defects">
+                    <figcaption>Images of selected carbon defect structures, with atoms in the immediate vicinity of the defect highlighted in red. (a) graphene divacancy defect (b) graphene Stone-Wales defect (c) graphene monovacancy (d) (9, 9)-nanotube Stone-Wales defect (transverse orientation) (e) (9, 9)-nanotube Stone-Wales defect (parallel orientation) (f) diamond split interstitial defect</figcaption>
+                    <div class="fig-div"></div>
+                </figure>
 
              </section>
 
@@ -61,8 +100,32 @@
                     <h2>Applications</h2>
                     <div class="section-div"></div>
                 </header>
+                
+                <p>Since its publication, the GAP-20 potential has been used a wide range of applications.</p>
+                <p>In the realm of random structure searches, GAP-20 has been instrumental in exploring the potential energy landscapes of carbon. By efficiently sampling these landscapes, researchers have identified novel carbon allotropes with unique properties. For instance, a study demonstrated the use of GAP-20 in conjunction with the nested sampling algorithm to uncover new carbon structures, highlighting its capability in <a class="link-citation" href="cit-structure-modelling">predicting stable configurations</a> that were previously unknown.</p>
 
-                <p>One use of the GAP-20 model is in <a class="link-citation" href="#cit-modelling-carbon">modelling carbon.</a></p>
+
+                <figure>
+                    <img src="figures/Figure_9_RSS.png" alt="structure searching with GAP-20">
+                    <figcaption>The GAP-20 model has been used to search for new structures of carbon, where it uncovered a family of previously unreported ethyne-rich sturctures and crosslinked graphene structures.</figcaption>
+                    <div class="fig-div"></div>
+                </figure>
+
+                <p>In addition to crystal structure, the application of the model to searching for carbon clusters has uncovered a <a class="link-citation" href="#cluster-rss">wide array of novel structures.</a></p>
+
+                <figure>
+                    <img src="figures/cluster-structure-search.png" alt="structure searching for clusters with GAP-20">
+                    <figcaption>Results of a search of novel low-energy carbon clusters with 240 and 540 atoms, as part of a larger overall investigation. Isomers are ordered by decreasing energy, with the minimum-energy structure shown on the bottom-left corner of each panel. Point group symmetries and cohesive energies per atom are indicated for each structure. Carbon atoms are colored by coordination: blue, green, and red spheres correspond to sp, sp2 and sp3-hybridised atoms, respectively. </figcaption>
+                    <div class="fig-div"></div>
+                </figure>
+
+                <p>And for examining the <a class="link-citation" href="#fullerene-stability"> thermal stability of monolayer structures. </a></p>
+
+                <figure>
+                    <img src="figures/c60-melting.png" alt="Thermal stability of C60 monolayers.">
+                    <figcaption>The GAP-20 model has been used to examine the thermal stability of monolayer materials made of C60 (fullerene) units.</figcaption>
+                    <div class="fig-div"></div>
+                </figure>
              </section>
 
              <!-- Section 4 -->
@@ -78,8 +141,10 @@
                 <header class="section-header">
                     <h2>References</h2>
                     <div class="section-div"></div>
-                </header>
-                <p class="citation" id="cit-modelling-carbon">1. Modelling Carbon</p>
+                </header>                
+                <p class="citation" id="cit-structure-modelling">1. <a href="https://www.nature.com/articles/s41524-023-01081-w">https://www.nature.com/articles/s41524-023-01081-w</a></p>
+                <p class="citation" id="cluster-rss">2. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0008622322000379">https://www.sciencedirect.com/science/article/abs/pii/S0008622322000379</a></p>
+                <p class="citation" id="fullerene-stability">3. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927025624007936">https://www.sciencedirect.com/science/article/abs/pii/S0927025624007936</a></p>
              </section>
         </main>        
     </body>

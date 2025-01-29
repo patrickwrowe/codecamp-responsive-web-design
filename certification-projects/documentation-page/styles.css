@@ -78,6 +78,7 @@ html {
 
 figure {
     width: inherit;
+    max-width: 50%;
     margin: auto;
 }
 
@@ -85,7 +86,6 @@ figcaption {
     font-size: 0.75rem;
 }
 
-#fig-1-summary {
-    width: inherit;
-    min-width: 400px;
+img {
+    width: inherit
 }
