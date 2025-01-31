@@ -1,0 +1,84 @@
+*, ::before, ::after {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+header {
+    background-color: lavenderblush;
+    position: fixed;
+    width: 100vw;
+    height: 7.5vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header img {
+    width: 7.5vw;
+    height: inherit;
+    padding-left: 1vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline;
+    border: 2px solid green;
+}
+
+header h1 {
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    height: inherit;
+    display: flex;
+    margin: 0;
+    border: 2px solid green;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    font-size: 2rem;
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    height: inherit;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3vw;
+    border: 2px solid green;
+}
+
+header ul li {
+    height: inherit;
+}
+
+header ul a {
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 1vw;
+}
+
+header ul a:hover {
+    background-color: lightblue;
+}
