@@ -11,14 +11,56 @@
     </head>
     <body>
         <header id="header">
-            <img src="https://upload.wikimedia.org/wikipedia/en/2/29/NFLD_Government_logo.svg" alt="Product Landing Page"/>
+            <img id="header-img" src="https://upload.wikimedia.org/wikipedia/en/2/29/NFLD_Government_logo.svg" alt="Product Landing Page"/>
             <h1>Newfoundland and Labrador Climbing</h1>
             <nav id="nav-bar">
                 <ul>
-                    <li><a href="#Intro">Intro</a></li>
-                    <li><a href="#Locations">Locations</a></li>
-                    <li><a href="#Visit">Visit</a></li>
+                    <li><a class="nav-link" href="#Intro">INTRO</a></li>
+                    <li><a class="nav-link" href="#Locations">LOCATIONS</a></li>
+                    <li><a class="nav-link" href="#Visit">VISIT</a></li>
                 </ul>
         </header>
+
+        <main>
+
+            <section id="Intro">
+                <h2>INTRO</h2>
+
+                <iframe id="video" width="420" height="315" src="https://www.youtube.com/embed/v=lrTZ6CWO6tw"></iframe>
+
+                <p>Newfoundland and Labrador is home to some of the most beautiful and challenging climbing locations in the world. With a variety of locations and difficulties, there is something for everyone. Whether you are a beginner or an experienced climber, Newfoundland and Labrador has something for you.</p>
+            </section>
+
+            <section id="Locations">
+                <h2>LOCATIONS</h2>
+                <div class="location">
+                    <img src="https://www.vmcdn.ca/f/files/glaciermedia/import/lmp-all/1048237-0708-grosmorne2.jpg;w=960" alt="Gros Morne National Park" id="img-gros-morne"/>
+                    <h3>Gros Morne National Park</h3>
+                    <p>Gros Morne National Park is a UNESCO World Heritage Site located on the west coast of Newfoundland. The park is home to some of the most beautiful and challenging climbing locations in the world. With a variety of locations and difficulties, there is something for everyone. Whether you are a beginner or an experienced climber, Gros Morne National Park has something for you.</p>
+                </div>
+            </section>
+
+            <section id="Visit">
+                <h2>VISIT</h2>
+                <p>For more information on climbing in Newfoundland and Labrador, visit the Newfoundland and Labrador Tourism website.</p>
+                <a href="https://www.newfoundlandlabrador.com/" target="_blank">Newfoundland and Labrador Tourism</a>
+            </section>
+
+            <section id="Contact">
+                <h2>CONTACT</h2>
+                <p>For more information on climbing in Newfoundland and Labrador, use the following form to contact us:</p>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required/>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.smith@email.com"/>
+
+                    <label for="message">Message:</label>
+                    <textarea cols=50 rows=10 id="message" name="message" placeholder="Your inquiry" required></textarea>
+
+                    <input id="submit" class="submit" type="submit">Submit</input>
+                </form>
+        </main> 
     </body>
 </html>
