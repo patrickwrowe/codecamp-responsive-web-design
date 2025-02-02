@@ -29,7 +29,8 @@ main {
 body {
     padding: 0;
     margin: 0;
-    color: var(--body-font-color)
+    color: var(--body-font-color);
+    overflow-x: hidden;
 }
 
 h1 {
@@ -99,11 +100,14 @@ header {
 
 /* Welcome Page */
 .welcome {
+    /*
     background: linear-gradient(
         var(--welcome-color),
         var(--welcome-color) 99%,
         var(--projects-color)
     )
+    */
+    background: var(--welcome-color);
 }
 
 .welcome h1 {
@@ -115,17 +119,63 @@ header {
 
 /* Projects Page */
 .projects {
+    /*
     background: linear-gradient(
         var(--projects-color),
         var(--projects-color) 99%,
         var(--contact-color)
     );
-
+    */
+    background: var(--projects-color);
     text-align: center;
 }
 
+
+/* 
+I think the use of this animation would get 
+me fired if I were actually a web developer 
+*/
+@keyframes slideright {
+    0.00000001% {
+        transform: translateX(5000px);
+    }
+
+}
+
+.header-container {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    backdrop-filter: blur(50px);
+    transition: 0.65s;
+
+    animation-name: slideright;
+    animation-duration: 500s;
+    animation-play-state: paused;
+    
+    &:hover{
+        backdrop-filter: none;
+        color: transparent;
+        animation-delay: 1s;
+        animation-play-state: running;
+    }
+
+    /* Don't transition back immediately */
+    &:not(:hover){
+        transition-delay: 10s;
+    }
+}
+
+
 .projects h1 {
-    padding-top: 3vh;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500px;
+    margin-top: -100px;
+    pointer-events: none;
+    color: inherit;
 }
 
 .grid-container {
@@ -160,3 +210,13 @@ header {
     background-color: var(--contact-color);
 }
 
+.contact h1 {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500px;
+    margin-top: -100px;
+    pointer-events: none;
+    color: inherit;
+}
