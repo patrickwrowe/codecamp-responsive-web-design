@@ -100,13 +100,6 @@ header {
 
 /* Welcome Page */
 .welcome {
-    /*
-    background: linear-gradient(
-        var(--welcome-color),
-        var(--welcome-color) 99%,
-        var(--projects-color)
-    )
-    */
     background: var(--welcome-color);
 }
 
@@ -119,13 +112,6 @@ header {
 
 /* Projects Page */
 .projects {
-    /*
-    background: linear-gradient(
-        var(--projects-color),
-        var(--projects-color) 99%,
-        var(--contact-color)
-    );
-    */
     background: var(--projects-color);
     text-align: center;
 }
@@ -197,12 +183,17 @@ me fired if I were actually a web developer
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: red;
 }
 
 .project-item img {
     width: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 /* Contact Page */
