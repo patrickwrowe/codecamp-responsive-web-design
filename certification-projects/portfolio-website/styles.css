@@ -6,13 +6,15 @@
     --body-font-color: white;
 
     --welcome-color: #32908F;
-    --projects-color: #26C485;
+    /*--projects-color: #26C485;*/
+    --projects-color: #d7e2f4;
     --contact-color: #A3E7FC;
 }
 
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* Effectively Global */
@@ -129,11 +131,12 @@ me fired if I were actually a web developer
 }
 
 .header-container {
+    z-index: 2;
     height: inherit;
     width: inherit;
     position: absolute;
     backdrop-filter: blur(50px);
-    transition: 0.65s;
+    transition: 1s;
 
     animation-name: slideright;
     animation-duration: 500s;
@@ -183,18 +186,37 @@ me fired if I were actually a web developer
     display: flex;
     align-content: center;
     justify-content: center;
+    position: relative;
+
+    /* border: 3px solid var(--header-color); */
+    border-radius: 10px;
+
+    mix-blend-mode: multiply;
+
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 .project-item img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    
-    transition: 0.5s;
-    &:hover{
-        transform: scale(1.05);
-    }
+    mix-blend-mode: multiply;
 }
+
+.img-summary {
+    height: 5vh;
+    width: 30vw;
+    color: black;
+    position: absolute;
+    top: 32vh;
+    border-radius: 0px 0px 10px 10px;
+    align-content: center;
+    backdrop-filter: blur(50px);
+}
+
 
 /* Contact Page */
 .contact {
