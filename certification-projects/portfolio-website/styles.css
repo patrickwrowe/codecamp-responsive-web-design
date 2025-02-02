@@ -150,6 +150,11 @@ header {
     background-color: red;
 }
 
+.project-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
 /* Contact Page */
 .contact {
     background-color: var(--contact-color);
