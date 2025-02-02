@@ -1,5 +1,24 @@
+
+:root {
+    --header-font-color: white;
+    --header-color: #050126;
+
+    --body-font-color: white;
+
+    --welcome-color: #32908F;
+    --projects-color: #26C485;
+    --contact-color: #A3E7FC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Effectively Global */
 html {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -10,17 +29,67 @@ main {
 body {
     padding: 0;
     margin: 0;
+    color: var(--body-font-color)
 }
 
+h1 {
+    font-size: 50px
+}
+
+/* Header */
 header {
     width: 100vw;
     height: 125px;
-    background-color: black;
+    background-color: var(--header-color);
+    color: var(--header-font-color);
     position: sticky;
     top: 0;
     z-index: 1;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.name-bar{
+    color: white;
+    margin: 0;
+    margin-left: 5vw;
+}
+
+.navbar {
+    height: inherit;
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar-links {
+    height: inherit;
+    margin: 0;
+    margin-right: 5vw;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+.navbar-links li {
+    height: inherit;
+}
+
+.navbar-link {
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* main content */
 .page {
     height: 100vh;
     width: 100vw;
@@ -28,15 +97,61 @@ header {
     padding: 0;
 }
 
+/* Welcome Page */
 .welcome {
+    background: linear-gradient(
+        var(--welcome-color),
+        var(--welcome-color) 99%,
+        var(--projects-color)
+    )
+}
+
+.welcome h1 {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Projects Page */
+.projects {
+    background: linear-gradient(
+        var(--projects-color),
+        var(--projects-color) 99%,
+        var(--contact-color)
+    );
+
+    text-align: center;
+}
+
+.projects h1 {
+    padding-top: 3vh;
+}
+
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(2, 37vh);
+    row-gap: 3vw;
+    column-gap: 3vw;
+}
+
+.project-item {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     background-color: red;
 }
 
-.projects {
-    background-color: green;
-}
-
+/* Contact Page */
 .contact {
-    background-color: blue;
+    background-color: var(--contact-color);
 }
 
