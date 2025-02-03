@@ -195,7 +195,7 @@ me fired if I were actually a web developer
     column-gap: 3vw;
 }
 
-.project-item {
+.project-tile {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -212,7 +212,7 @@ me fired if I were actually a web developer
     }
 }
 
-.project-item img {
+.project-tile img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -220,7 +220,7 @@ me fired if I were actually a web developer
 }
 
 .img-summary {
-    height: 5vh;
+    height: 8vh;
     width: 30vw;
     color: black;
     position: absolute;
@@ -273,5 +273,79 @@ me fired if I were actually a web developer
 
     &:hover{
         transform: scale(1.025);
+    }
+}
+
+@media only screen and (max-width: 1650px) {
+    html {
+        font-size: 12px;
+    }
+
+    :root {
+        --large-dissapearing-font-size: 30rem; 
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    html {
+        font-size: 10px;
+    }
+
+    :root {
+        --large-dissapearing-font-size: 25rem; 
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    html {
+        font-size: 6px;
+    }
+
+    :root {
+        --large-dissapearing-font-size: 20rem; 
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 45vw);
+        grid-template-rows: repeat(3, 21vh);
+        row-gap: 7vh;
+    }
+    
+    .img-summary {
+        width: 45vw;
+        top: 17vh;
+    }
+
+    .img-summary h3 {
+        font-size: 3rem;
+    }
+
+    .contact-content{
+        flex-direction: column;
     }
 }
