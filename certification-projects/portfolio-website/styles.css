@@ -131,6 +131,15 @@ header {
     text-align: center;
 }
 
+.project-link {
+    text-decoration: none;
+
+    color: inherit;
+
+    &:hover {
+        color: darkblue;
+    }
+}
 
 /* 
 I think the use of this animation would get 
