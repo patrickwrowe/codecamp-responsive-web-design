@@ -5,10 +5,12 @@
 
     --body-font-color: white;
 
-    --welcome-color: #32908F;
+    --welcome-color: #4c7edc;
     /*--projects-color: #26C485;*/
     --projects-color: #d7e2f4;
     --contact-color: #A3E7FC;
+
+    --large-dissapearing-font-size: 35rem;
 }
 
 * {
@@ -36,7 +38,15 @@ body {
 }
 
 h1 {
-    font-size: 35px
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 /* Header */
@@ -89,7 +99,6 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bolder;
-    font-size: 50px;
 }
 
 /* main content */
@@ -103,10 +112,14 @@ header {
 /* Welcome Page */
 .welcome {
     background: var(--welcome-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .welcome h1 {
-    height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +174,7 @@ me fired if I were actually a web developer
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 500px;
+    font-size: var(--large-dissapearing-font-size);
     margin-top: -100px;
     pointer-events: none;
     color: inherit;
@@ -195,7 +208,7 @@ me fired if I were actually a web developer
 
     transition: 0.5s;
     &:hover{
-        transform: scale(1.05);
+        transform: scale(1.025);
     }
 }
 
@@ -228,8 +241,37 @@ me fired if I were actually a web developer
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 500px;
+    font-size: var(--large-dissapearing-font-size);
     margin-top: -100px;
     pointer-events: none;
     color: inherit;
+}
+
+.contact-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-links {
+    display: flex;
+    list-style-type: none;
+    gap: 100px;
+}
+
+.contact-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-link h2 {
+    font-size: 15rem;
+
+    transition: 0.5s;
+
+    &:hover{
+        transform: scale(1.025);
+    }
 }
